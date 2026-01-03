@@ -12,6 +12,7 @@ def sent_detector():
     # Retrieve the text to analyze from the request arguments
     text_to_analyze = request.args.get('textToAnalyze')
     # Pass the text to the emotion_detector function and store the response
+       
     response = emotion_detector(text_to_analyze)
     return response
 
