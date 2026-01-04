@@ -14,6 +14,8 @@ def sent_detector():
     # Pass the text to the emotion_detector function and store the response
        
     response = emotion_detector(text_to_analyze)
+    if response["dominant_emotion"] is None:
+        return "Invalid text! Please try again!."
     return response
 
 if __name__ == "__main__":
